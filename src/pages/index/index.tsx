@@ -11,15 +11,14 @@ import './index.css';
 const Welcome = () => {
   // Function to navigate to another screen
   // 导航到另一个页面的函数
-  const navigateToAnotherScreen = () => {
+  const navigateToAnotherScreen = (url: string) => {
     Taro.navigateTo({
-      url: '/pages/userpages/home/index',
+      url,
     });
   };
 
   return (
     <Image
-      className='background-image'
       src={backgroundImage}
       mode='aspectFill'
       style={{
@@ -56,7 +55,7 @@ const Welcome = () => {
             身比錯几經乙故火八個羊花民是別尤刃下活爪員哪乍呢花枝裝六犬食蝸打金，秋合春圓穿高八幾喜一間男急乾右元。
           </Text>
         </View>
-        <Button title='登录' fn={navigateToAnotherScreen} />
+        <Button title='登录' fn={() => navigateToAnotherScreen('/pages/userpages/home/index')} />
       </View>
     </Image>
   );
