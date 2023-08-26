@@ -1,0 +1,8 @@
+.gradient-background {
+  background: linear-gradient(
+    to bottom,
+    #2a498c,
+    #eff4ff
+  ); /* Adjust colors and direction */
+  width: 100%;
+}
